@@ -50,21 +50,45 @@ table {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  width: 100%;
   padding: 0 20px;
 }
 
-h1 {
-  font-family: Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.625rem;
-  line-height: 132%;
+header {
+  background-color: #12284C;
+  padding: 24px 0;
 }
-@media (min-width: 992px) {
-  h1 {
-    font-size: 3.25rem;
-  }
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div .figure-logo {
+  width: 132px;
+  height: 37px;
+}
+header > div .figure-logo > img {
+  width: 100%;
+  height: 100%;
+}
+header > div > div {
+  display: flex;
+  gap: 45px;
+}
+header > div > div .figure-bell {
+  width: 20px;
+  height: 20px;
+}
+header > div > div .figure-bell > img {
+  width: 100%;
+  height: 100%;
+}
+header > div > div .figure-burger {
+  width: 26px;
+  height: 18px;
+}
+header > div > div .figure-burger > img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
