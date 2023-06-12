@@ -1,0 +1,102 @@
+@use "sass:math";
+
+$font-family-primary: Helvetica, sans-serif;
+$font-family-secondary: Arial, sans-serif;
+$base-font-size: 16;
+
+@function pxToRem($pxValue) {
+    $remValue: math.div($pxValue, $base-font-size);
+    @return #{$remValue}rem;
+}
+
+@mixin display($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(42);
+    line-height: 132%;
+
+    @include media_query(desktop) {
+        font-size: pxToRem(52);
+    }
+}
+
+@mixin heading1($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(36);
+    line-height: 132%;
+
+    @include media_query(desktop) {
+        font-size: pxToRem(40);
+    }
+}
+
+@mixin heading2($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(30);
+    line-height: 132%;
+
+    @include media_query(desktop) {
+        font-size: pxToRem(34);
+    }
+}
+
+@mixin heading3($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(28);
+    line-height: 132%;
+}
+
+@mixin heading4($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(24);
+    line-height: 132%;
+}
+
+@mixin heading5($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(21);
+    line-height: 132%;
+}
+
+@mixin heading6($font-weight) {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: pxToRem(18);
+    line-height: 132%;
+}
+
+@mixin text_lg($font-weight) {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+@mixin text_md($font-weight) {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 14px;
+    line-height: 160%;
+}
+
+@mixin text_sm($font-weight) {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 12px;
+    line-height: 132%;
+}

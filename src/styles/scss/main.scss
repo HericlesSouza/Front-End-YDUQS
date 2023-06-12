@@ -1,0 +1,8 @@
+@import "_reset.scss";
+@import "_responsive.scss";
+@import "_typography.scss";
+
+
+h1 {
+    @include display(500)
+}
