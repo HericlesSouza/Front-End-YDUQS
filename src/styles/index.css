@@ -230,7 +230,28 @@ header nav:nth-child(1) div:nth-child(4) .figure-burger > img {
 }
 header #hidden {
   display: none;
-  transform: translateY(-100%);
+}
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+header .animate-in {
+  animation: slideIn 1s forwards;
+}
+header .animate-out {
+  animation: slideOut 1s forwards;
 }
 header .nav-mobile {
   top: 0;
@@ -240,7 +261,6 @@ header .nav-mobile {
   width: 100%;
   height: 100vh;
   background-color: #12284c;
-  transition: transform 0.3s ease-in-out;
 }
 header .nav-mobile > div {
   display: flex;
