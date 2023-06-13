@@ -19,6 +19,10 @@ $container: 1440px;
         @media (min-width: 992px) {
             @content;
         }
+    } @else if $size_device == large_desktop {
+        @media (min-width: 1440px) {
+            @content;
+        }
     }
 }
 

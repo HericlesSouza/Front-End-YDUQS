@@ -2,12 +2,13 @@
 @import "_colors.scss";
 @import "_responsive.scss";
 @import "_typography.scss";
+@import "_slides.scss";
 
 header {
     background-color: $color-secondary;
     padding: 24px 0;
 
-    > nav {
+    nav:nth-child(1) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,10 +27,13 @@ header {
                 display: flex;
                 align-items: center;
                 gap: 0 24px;
+                user-select: none;
+
                 p,
                 span {
                     color: $white;
                     @include text_lg("Bold");
+                    user-select: none;
 
                     span {
                         color: $color-primary-darkened;
@@ -44,11 +48,12 @@ header {
                 align-items: center;
                 gap: 10px;
                 color: $white;
-
+                user-select: none;
                 @include text_lg("Regular");
 
                 figure {
                     height: 21px;
+                    cursor: pointer;
                 }
             }
         }
@@ -56,7 +61,7 @@ header {
         & div:nth-child(4) {
             display: flex;
             align-items: center;
-            gap: 0 44px;
+            gap: 0 40px;
 
             .figure-bell {
                 width: 20px;
@@ -84,13 +89,21 @@ header {
                 .figure-flag {
                     display: block;
                     height: 25px;
+                    cursor: pointer;
                 }
 
                 .figure-search {
                     display: block;
+                    cursor: pointer;
                 }
             }
         }
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -207,10 +220,12 @@ main section:nth-child(1) {
                     div {
                         display: flex;
                         align-items: center;
+                        gap: 20px;
 
                         button {
                             border: none;
                             background-color: transparent;
+                            cursor: pointer;
                         }
 
                         & button:nth-child(2) {
@@ -315,26 +330,6 @@ main > .shortcuts {
     }
 }
 
-main > .cards {
-    & > ul {
-        display: flex;
-        overflow-x: auto;
-        padding: 0;
-    }
-
-    .card {
-        figure {
-            width: 360px;
-            object-fit: cover;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-}
-
 main > .results-calender {
     @include media_query(desktop) {
         display: flex;
@@ -366,6 +361,7 @@ main > .results-calender {
             .btn-next {
                 border: none;
                 background-color: transparent;
+                cursor: pointer;
             }
 
             span,
@@ -400,6 +396,12 @@ main > .results-calender {
                 width: 40%;
                 color: $gray500;
                 text-align: center;
+                border: 1px solid transparent;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: $color-primary;
+                }
 
                 @include text_lg("Regular");
 
@@ -466,6 +468,11 @@ main > .results-calender {
 
             .event {
                 border-bottom: 1px solid $grey200;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: $color-primary;
+                }
 
                 @include media_query(desktop) {
                     display: flex;
@@ -552,8 +559,7 @@ main > .results-calender {
 
             @include media_query(desktop) {
                 text-align: justify;
-                margin: 0;
-                margin-top: auto;
+                margin-top: 30px;
                 @include heading6("Regular");
             }
         }
@@ -574,26 +580,26 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 8px;
-    
+
         @include media_query(desktop) {
             background-color: $color-secondary-darkened;
             flex-direction: row;
             justify-content: space-between;
         }
-    
+
         > h4 {
             text-align: center;
             color: $color-primary;
             @include text_md("Bold");
         }
-    
+
         > div {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 0 16px;
         }
-        
+
         .linkedin-mob {
             @include media_query(desktop) {
                 display: none;
@@ -603,11 +609,13 @@ footer {
         .linkedin-desk {
             @include media_query(desktop) {
                 display: block;
+                cursor: pointer;
             }
         }
+
         p {
             color: $white;
             @include text_md("Regular");
         }
-    } 
+    }
 }

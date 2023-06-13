@@ -12,7 +12,7 @@
     </head>
     <body>
         <header>
-            <nav class="container">
+            <nav class="container hidden">
                 <figure class="figure-logo">
                     <img
                         src="./assets/header/logo_YDUQS.svg"
@@ -63,10 +63,24 @@
                             alt="Pesquisar"
                         />
                     </figure>
-                    <figure class="figure-burger">
+                    <figure class="figure-burger hidden">
                         <img src="./assets/header/menu_burger.svg" alt="Menu" />
                     </figure>
                 </div>
+            </nav>
+            <nav class="nav-mobile container">
+                <figure class="figure-logo">
+                    <img
+                        src="./assets/header/logo_YDUQS.svg"
+                        alt="Logo YDUQS"
+                    />
+                </figure>
+                <figure class="figure-close-burger hidden">
+                    <img
+                        src="./assets/header/close_menu_burger.svg"
+                        alt="Close Menu"
+                    />
+                </figure>
             </nav>
         </header>
         <main>
@@ -163,40 +177,54 @@
                 </ul>
             </section>
             <section class="cards">
-                <ul class="container">
-                    <li class="card">
-                        <figure>
-                            <img
-                                src="./assets/cards/card_who_we_are.png"
-                                alt="Quem somos"
-                            />
-                        </figure>
-                    </li>
-                    <li class="card">
-                        <figure>
-                            <img
-                                src="./assets/cards/card_business.png"
-                                alt="Nossas unidades de negócio"
-                            />
-                        </figure>
-                    </li>
-                    <li class="card">
-                        <figure>
-                            <img
-                                src="./assets/cards/card_strategy.png"
-                                alt="Nossa estratégia"
-                            />
-                        </figure>
-                    </li>
-                    <li class="card">
-                        <figure>
-                            <img
-                                src="./assets/cards/card_esg.png"
-                                alt="Nosso impacto"
-                            />
-                        </figure>
-                    </li>
-                </ul>
+                <div class="carousel-container container">
+                    <ul class="card-list">
+                        <li class="card">
+                            <figure>
+                                <img
+                                    src="/src/assets/cards/card_who_we_are.png"
+                                    alt="Quem somos"
+                                />
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img
+                                    src="/src/assets/cards/card_business.png"
+                                    alt="Nossas unidades de negócio"
+                                />
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img
+                                    src="/src/assets/cards/card_strategy.png"
+                                    alt="Nossa estratégia"
+                                />
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img
+                                    src="/src/assets/cards/card_esg.png"
+                                    alt="Nosso impacto"
+                                />
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel-controls">
+                    <figure class="arrow left">
+                        <img
+                            src="./assets/arrow_blue.png"
+                            alt="Seta Anterior"
+                        />
+                    </figure>
+                    <div class="dots"></div>
+                    <figure class="arrow right">
+                        <img src="./assets/arrow_blue.png" alt="Seta Próxima" />
+                    </figure>
+                </div>
             </section>
             <figure class="container">
                 <img src="./assets/balls.svg" alt="Balls" />
@@ -378,7 +406,10 @@
                 <div>
                     <p>Trabalhe conosco</p>
                     <figure class="linkedin-mob">
-                        <img src="./assets/contacts/linkedin.svg" alt="LinkedIn" />
+                        <img
+                            src="./assets/contacts/linkedin.svg"
+                            alt="LinkedIn"
+                        />
                     </figure>
                 </div>
                 <figure class="linkedin-desk hidden">
@@ -387,5 +418,6 @@
                 <p>Desenvolvido por: RIWeb</p>
             </div>
         </footer>
+        <script src="./scripts/slides.js"></script>
     </body>
 </html>
