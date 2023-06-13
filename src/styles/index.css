@@ -17,6 +17,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 article, aside, details, figcaption, figure,
@@ -50,21 +51,681 @@ table {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  width: 100%;
   padding: 0 20px;
 }
 
-h1 {
-  font-family: Helvetica, sans-serif;
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: #12284c;
+  padding: 24px 0;
+}
+header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > nav .figure-logo {
+  width: 132px;
+  height: 37px;
+}
+header > nav .figure-logo > img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  header > nav div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+  }
+  header > nav div:nth-child(2) p,
+  header > nav div:nth-child(2) span {
+    color: #ffffff;
+    font-family: Brandon Grotesque Bold;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  header > nav div:nth-child(2) p span,
+  header > nav div:nth-child(2) span span {
+    color: #009abf;
+  }
+}
+@media (min-width: 992px) {
+  header > nav .acessibility {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  header > nav .acessibility figure {
+    height: 21px;
+  }
+}
+header > nav div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  gap: 0 44px;
+}
+header > nav div:nth-child(4) .figure-bell {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+header > nav div:nth-child(4) .figure-bell > img {
+  width: 100%;
+  height: 100%;
+}
+header > nav div:nth-child(4) .figure-burger {
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+}
+header > nav div:nth-child(4) .figure-burger > img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  header > nav div:nth-child(4) .figure-flag {
+    display: block;
+    height: 25px;
+  }
+  header > nav div:nth-child(4) .figure-search {
+    display: block;
+  }
+}
+
+main section:nth-child(1) {
+  background-color: #12284c;
+}
+main section:nth-child(1) > .figure-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 444px;
+  background-image: url("/src/assets/banner_img.svg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner {
+    background-color: #12284c;
+    background-size: auto;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+}
+main section:nth-child(1) > .figure-banner::after {
+  content: "";
+  margin-left: 16px;
+  width: calc(100% - 16px);
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: #00adbb;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner::after {
+    margin-left: calc(100% - 320px);
+    right: 0;
+  }
+}
+main section:nth-child(1) > .figure-banner > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main section:nth-child(1) > .figure-banner > div div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+main section:nth-child(1) > .figure-banner > div div:nth-child(1) h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: Brandon Grotesque Bold;
   font-style: normal;
-  font-weight: 500;
-  font-size: 2.625rem;
+  font-size: 2.25rem;
   line-height: 132%;
 }
 @media (min-width: 992px) {
-  h1 {
-    font-size: 3.25rem;
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) h1 {
+    font-size: 2.5rem;
   }
+}
+main section:nth-child(1) > .figure-banner > div div:nth-child(1) span:nth-child(2) {
+  text-align: center;
+  color: #00adbb;
+  font-family: Brandon Grotesque Light;
+  font-style: normal;
+  font-size: 2.25rem;
+  line-height: 132%;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) span:nth-child(2) {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) span:nth-child(2) {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) span:nth-child(3) {
+    display: block;
+    margin-top: 15px;
+    color: #00adbb;
+    font-family: Brandon Grotesque Bold;
+    font-style: normal;
+    font-size: 1.875rem;
+    line-height: 132%;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div div:nth-child(1) span:nth-child(3) {
+    font-size: 2.125rem;
+  }
+}
+main section:nth-child(1) > .figure-banner > div > div:nth-child(2) {
+  margin-top: 32px;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div > div:nth-child(2) {
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 280px;
+  }
+}
+main section:nth-child(1) > .figure-banner > div > div:nth-child(2) a {
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #ffffff;
+  width: max-content;
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 132%;
+}
+main section:nth-child(1) > .figure-banner > div > div:nth-child(2) a:hover {
+  color: #00adbb;
+  border-color: #00adbb;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner > div > div:nth-child(2) div {
+    display: flex;
+    align-items: center;
+  }
+  main section:nth-child(1) > .figure-banner > div > div:nth-child(2) div button {
+    border: none;
+    background-color: transparent;
+  }
+  main section:nth-child(1) > .figure-banner > div > div:nth-child(2) div button:nth-child(2) img {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+}
+main section:nth-child(1) > .figure-banner .figure-balls {
+  position: absolute;
+  left: 15px;
+  bottom: 4px;
+  width: 300px;
+  height: 85px;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner .figure-balls {
+    margin-left: 186px;
+  }
+}
+main section:nth-child(1) > .figure-banner .figure-balls > img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  main section:nth-child(1) > .figure-banner .figure-bullets {
+    display: block;
+  }
+}
+
+main > .shortcuts {
+  position: relative;
+  background-color: #12284c;
+  padding: 80px 0;
+}
+main > .shortcuts ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px 15px;
+}
+@media (min-width: 992px) {
+  main > .shortcuts ul {
+    flex-wrap: nowrap;
+    gap: 0 30px;
+  }
+}
+main > .shortcuts .shortcut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 130px;
+  background: #00adbb;
+  border: 2px solid transparent;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  main > .shortcuts .shortcut {
+    width: 150px;
+  }
+}
+main > .shortcuts .shortcut figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+}
+main > .shortcuts .shortcut p {
+  color: #12284c;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+@media (max-width: 374px) {
+  main > .shortcuts .shortcut p {
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 160%;
+  }
+}
+main > .shortcuts .shortcut:hover {
+  border-color: #bbfaff;
+}
+main > .shortcuts::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: #00adbb;
+}
+
+main > .cards > ul {
+  display: flex;
+  overflow-x: auto;
+  padding: 0;
+}
+main > .cards .card figure {
+  width: 360px;
+  object-fit: cover;
+}
+main > .cards .card figure img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  main > .results-calender {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  main > .results-calender .results-center {
+    width: 50%;
+  }
+}
+main > .results-calender .results-center h2 {
+  color: #12284c;
+  text-align: center;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 132%;
+}
+@media (min-width: 992px) {
+  main > .results-calender .results-center h2 {
+    text-align: start;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 132%;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  main > .results-calender .results-center h2 {
+    font-size: 2.5rem;
+  }
+}
+main > .results-calender .results-center > div {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+  margin-top: 24px;
+}
+main > .results-calender .results-center > div .btn-previous,
+main > .results-calender .results-center > div .btn-next {
+  border: none;
+  background-color: transparent;
+}
+main > .results-calender .results-center > div span,
+main > .results-calender .results-center > div .span-1T {
+  color: #12284c;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 132%;
+}
+main > .results-calender .results-center > div span .span-1T,
+main > .results-calender .results-center > div .span-1T .span-1T {
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 132%;
+}
+main > .results-calender .results-center > .list-results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 16px;
+  margin-top: 50px;
+}
+@media (min-width: 992px) {
+  main > .results-calender .results-center > .list-results {
+    justify-content: flex-start;
+    gap: 40px 60px;
+  }
+}
+main > .results-calender .results-center > .list-results .result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: #4d4d4d;
+  text-align: center;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+@media (max-width: 374px) {
+  main > .results-calender .results-center > .list-results .result {
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 160%;
+  }
+}
+@media (min-width: 992px) {
+  main > .results-calender .results-center > .list-results .result {
+    width: 160px;
+  }
+}
+main > .results-calender .results-center > a {
+  display: block;
+  color: #12284c;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 44px;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 132%;
+}
+main > .results-calender .results-center > a:hover {
+  color: #2f69c8;
+}
+@media (max-width: 374px) {
+  main > .results-calender .results-center > a {
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-weight: "Regular";
+    font-size: 1.3125rem;
+    line-height: 132%;
+  }
+}
+@media (min-width: 992px) {
+  main > .results-calender .results-center > a {
+    text-align: justify;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 132%;
+  }
+}
+main > .results-calender .calender-events {
+  margin-top: 72px;
+}
+@media (min-width: 992px) {
+  main > .results-calender .calender-events {
+    margin-top: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+main > .results-calender .calender-events > h2 {
+  color: #12284c;
+  text-align: center;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 132%;
+}
+@media (min-width: 992px) {
+  main > .results-calender .calender-events > h2 {
+    text-align: start;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 132%;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  main > .results-calender .calender-events > h2 {
+    font-size: 2.5rem;
+  }
+}
+main > .results-calender .calender-events .list-events {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px 0;
+}
+main > .results-calender .calender-events .list-events .event {
+  border-bottom: 1px solid #e6e6e6;
+}
+@media (min-width: 992px) {
+  main > .results-calender .calender-events .list-events .event {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main > .results-calender .calender-events .list-events .event .event-date {
+  display: flex;
+  align-items: center;
+}
+main > .results-calender .calender-events .list-events .event .event-date .month {
+  color: #00adbb;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+main > .results-calender .calender-events .list-events .event .event-date .month::after {
+  content: "|";
+  margin: 0 8px;
+  color: #00adbb;
+}
+@media (max-width: 374px) {
+  main > .results-calender .calender-events .list-events .event .event-date .month {
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 160%;
+  }
+}
+main > .results-calender .calender-events .list-events .event .event-date .day {
+  color: #00adbb;
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+@media (max-width: 374px) {
+  main > .results-calender .calender-events .list-events .event .event-date .day {
+    font-family: Brandon Grotesque Bold;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 160%;
+  }
+}
+main > .results-calender .calender-events .list-events .event div div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-left: 10px;
+}
+main > .results-calender .calender-events .list-events .event div div:nth-child(2) .event-message {
+  color: #262626;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+main > .results-calender .calender-events .list-events .event div div:nth-child(2) .event-hour {
+  color: #808080;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+main > .results-calender .calender-events .list-events .event .div-contacts {
+  margin: 5px 0 12px 0;
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  main > .results-calender .calender-events .list-events .event .div-contacts {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+main > .results-calender .calender-events > a {
+  display: block;
+  color: #12284c;
+  text-align: center;
+  text-decoration: underline;
+  margin: 30px 0 62px 0;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 132%;
+}
+main > .results-calender .calender-events > a:hover {
+  color: #2f69c8;
+}
+@media (max-width: 374px) {
+  main > .results-calender .calender-events > a {
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-weight: "Regular";
+    font-size: 1.3125rem;
+    line-height: 132%;
+  }
+}
+@media (min-width: 992px) {
+  main > .results-calender .calender-events > a {
+    text-align: justify;
+    margin: 0;
+    margin-top: auto;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 132%;
+  }
+}
+
+footer {
+  background-color: #12284c;
+  padding: 16px;
+}
+@media (min-width: 992px) {
+  footer {
+    background-color: #0c1b33;
+    margin-top: 50px;
+  }
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+@media (min-width: 992px) {
+  footer > div {
+    background-color: #0c1b33;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer > div > h4 {
+  text-align: center;
+  color: #00adbb;
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+footer > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 16px;
+}
+@media (min-width: 992px) {
+  footer > div .linkedin-mob {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  footer > div .linkedin-desk {
+    display: block;
+  }
+}
+footer > div p {
+  color: #ffffff;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 160%;
 }
 
 /*# sourceMappingURL=index.css.map */
