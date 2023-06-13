@@ -113,6 +113,32 @@ header {
         display: none;
     }
 
+    @keyframes slideIn {
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            left: 0;
+        }
+        to {
+            left: 100%;
+        }
+    }
+
+    .animate-in {
+        animation: slideIn 1s forwards;
+    }
+
+    .animate-out {
+        animation: slideOut 1s forwards;
+    }
+
     .nav-mobile {
         top: 0;
         left: 0;
@@ -121,7 +147,7 @@ header {
         width: 100%;
         height: 100vh;
         background-color: $color-secondary;
-        
+
         > div {
             display: flex;
             flex-direction: column;
@@ -259,7 +285,7 @@ header {
 
                         p {
                             color: $white;
-                            @include text_lg("Regular")
+                            @include text_lg("Regular");
                         }
                     }
                 }
