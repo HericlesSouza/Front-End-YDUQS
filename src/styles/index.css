@@ -54,44 +54,92 @@ table {
   padding: 0 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   background-color: #12284c;
   padding: 24px 0;
 }
-header > div {
+header > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header > div .figure-logo {
+header > nav .figure-logo {
   width: 132px;
   height: 37px;
 }
-header > div .figure-logo > img {
+header > nav .figure-logo > img {
   width: 100%;
   height: 100%;
 }
-header > div > div {
-  display: flex;
-  gap: 45px;
+@media (min-width: 992px) {
+  header > nav div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+  }
+  header > nav div:nth-child(2) p,
+  header > nav div:nth-child(2) span {
+    color: #ffffff;
+    font-family: Brandon Grotesque Bold;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  header > nav div:nth-child(2) p span,
+  header > nav div:nth-child(2) span span {
+    color: #009ABF;
+  }
 }
-header > div > div .figure-bell {
+@media (min-width: 992px) {
+  header > nav .acessibility {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-family: Brandon Grotesque Regular;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  header > nav .acessibility figure {
+    height: 21px;
+  }
+}
+header > nav div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  gap: 0 44px;
+}
+header > nav div:nth-child(4) .figure-bell {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-header > div > div .figure-bell > img {
+header > nav div:nth-child(4) .figure-bell > img {
   width: 100%;
   height: 100%;
 }
-header > div > div .figure-burger {
+header > nav div:nth-child(4) .figure-burger {
   width: 26px;
   height: 18px;
   cursor: pointer;
 }
-header > div > div .figure-burger > img {
+header > nav div:nth-child(4) .figure-burger > img {
   width: 100%;
   height: 100%;
+}
+@media (min-width: 992px) {
+  header > nav div:nth-child(4) .figure-flag {
+    display: block;
+    height: 25px;
+  }
+  header > nav div:nth-child(4) .figure-search {
+    display: block;
+  }
 }
 
 main > .figure-banner {
@@ -208,14 +256,14 @@ main > .shortcuts .shortcut p {
   color: #12284c;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 @media (max-width: 374px) {
   main > .shortcuts .shortcut p {
     font-family: Brandon Grotesque Regular;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
   }
 }
@@ -296,14 +344,14 @@ main > .results-calender .results-center > .list-results .result {
   text-align: center;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 @media (max-width: 374px) {
   main > .results-calender .results-center > .list-results .result {
     font-family: Brandon Grotesque Regular;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
   }
 }
@@ -358,7 +406,7 @@ main > .results-calender .calender-events .list-events .event .event-date .month
   color: #00adbb;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 main > .results-calender .calender-events .list-events .event .event-date .month::after {
@@ -370,7 +418,7 @@ main > .results-calender .calender-events .list-events .event .event-date .month
   main > .results-calender .calender-events .list-events .event .event-date .month {
     font-family: Brandon Grotesque Regular;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
   }
 }
@@ -378,14 +426,14 @@ main > .results-calender .calender-events .list-events .event .event-date .day {
   color: #00adbb;
   font-family: Brandon Grotesque Bold;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 @media (max-width: 374px) {
   main > .results-calender .calender-events .list-events .event .event-date .day {
     font-family: Brandon Grotesque Bold;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
   }
 }
@@ -396,14 +444,14 @@ main > .results-calender .calender-events .list-events .event div:nth-child(2) .
   color: #262626;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 main > .results-calender .calender-events .list-events .event div:nth-child(2) .event-hour {
   color: #808080;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 160%;
 }
 main > .results-calender .calender-events .list-events .event div:nth-child(3) {
@@ -448,7 +496,7 @@ footer > h4 {
   color: #00adbb;
   font-family: Brandon Grotesque Bold;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 160%;
 }
 footer > div {
@@ -461,7 +509,7 @@ footer p {
   color: #ffffff;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 160%;
 }
 

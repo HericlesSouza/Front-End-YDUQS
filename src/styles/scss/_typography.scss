@@ -74,20 +74,20 @@ $base-font-size: 16;
 @mixin text_lg($font-weight) {
     font-family: #{$font-family-primary} #{$font-weight};
     font-style: normal;
-    font-size: 16px;
+    font-size: pxToRem(16);
     line-height: 160%;
 }
 
 @mixin text_md($font-weight) {
     font-family: #{$font-family-primary} #{$font-weight};
     font-style: normal;
-    font-size: 14px;
+    font-size: pxToRem(14);
     line-height: 160%;
 }
 
 @mixin text_sm($font-weight) {
     font-family: #{$font-family-primary} #{$font-weight};
     font-style: normal;
-    font-size: 12px;
+    font-size: pxToRem(12);
     line-height: 132%;
 }
