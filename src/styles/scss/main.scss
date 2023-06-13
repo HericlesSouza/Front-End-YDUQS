@@ -562,27 +562,52 @@ main > .results-calender {
 
 footer {
     background-color: $color-secondary;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
     padding: 16px;
 
-    > h4 {
-        text-align: center;
-        color: $color-primary;
-        @include text_md("Bold");
+    @include media_query(desktop) {
+        background-color: $color-secondary-darkened;
+        margin-top: 50px;
     }
 
     > div {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        gap: 0 16px;
-    }
+        gap: 8px;
+    
+        @include media_query(desktop) {
+            background-color: $color-secondary-darkened;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        > h4 {
+            text-align: center;
+            color: $color-primary;
+            @include text_md("Bold");
+        }
+    
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 16px;
+        }
+        
+        .linkedin-mob {
+            @include media_query(desktop) {
+                display: none;
+            }
+        }
 
-    p {
-        color: $white;
-        @include text_md("Regular");
-    }
+        .linkedin-desk {
+            @include media_query(desktop) {
+                display: block;
+            }
+        }
+        p {
+            color: $white;
+            @include text_md("Regular");
+        }
+    } 
 }

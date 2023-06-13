@@ -91,7 +91,7 @@ header > nav .figure-logo > img {
   }
   header > nav div:nth-child(2) p span,
   header > nav div:nth-child(2) span span {
-    color: #009ABF;
+    color: #009abf;
   }
 }
 @media (min-width: 992px) {
@@ -560,7 +560,7 @@ main > .results-calender .calender-events .list-events {
   gap: 16px 0;
 }
 main > .results-calender .calender-events .list-events .event {
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
 }
 @media (min-width: 992px) {
   main > .results-calender .calender-events .list-events .event {
@@ -675,13 +675,28 @@ main > .results-calender .calender-events > a:hover {
 
 footer {
   background-color: #12284c;
+  padding: 16px;
+}
+@media (min-width: 992px) {
+  footer {
+    background-color: #0c1b33;
+    margin-top: 50px;
+  }
+}
+footer > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 16px;
 }
-footer > h4 {
+@media (min-width: 992px) {
+  footer > div {
+    background-color: #0c1b33;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer > div > h4 {
   text-align: center;
   color: #00adbb;
   font-family: Brandon Grotesque Bold;
@@ -689,13 +704,23 @@ footer > h4 {
   font-size: 0.875rem;
   line-height: 160%;
 }
-footer > div {
+footer > div > div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 16px;
 }
-footer p {
+@media (min-width: 992px) {
+  footer > div .linkedin-mob {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  footer > div .linkedin-desk {
+    display: block;
+  }
+}
+footer > div p {
   color: #ffffff;
   font-family: Brandon Grotesque Regular;
   font-style: normal;
