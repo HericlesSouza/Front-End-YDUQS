@@ -49,13 +49,19 @@
                 </div>
                 <div>
                     <figure class="figure-flag hidden">
-                        <img src="./assets/header/en-flag.svg" alt="Bandeira EUA">
+                        <img
+                            src="./assets/header/en-flag.svg"
+                            alt="Bandeira EUA"
+                        />
                     </figure>
                     <figure class="figure-bell">
                         <img src="./assets/header/bell.png" alt="Sino" />
                     </figure>
                     <figure class="figure-search hidden">
-                        <img src="./assets/header/search_icon.svg" alt="Pesquisar">
+                        <img
+                            src="./assets/header/search_icon.svg"
+                            alt="Pesquisar"
+                        />
                     </figure>
                     <figure class="figure-burger">
                         <img src="./assets/header/menu_burger.svg" alt="Menu" />
@@ -64,15 +70,39 @@
             </nav>
         </header>
         <main>
-            <section class="figure-banner">
-                <div>
-                    <h1>Divulgação de Resultados</h1>
-                    <span>1º TRI 2021</span>
-                    <a href="#">Saiba mais</a>
+            <section>
+                <div class="figure-banner container">
+                    <div>
+                        <div>
+                            <h1>Divulgação de Resultados</h1>
+                            <span>1º TRI 2021</span>
+                            <span class="hidden">3T21</span>
+                        </div>
+                        <div>
+                            <a href="#">Saiba mais</a>
+                            <div class="hidden">
+                                <button>
+                                    <img
+                                        src="./assets/arrow_blue.png"
+                                        alt="Seta anterior"
+                                    />
+                                </button>
+                                <button>
+                                    <img
+                                        src="./assets/arrow_blue.png"
+                                        alt="Seta próxima"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="figure-balls">
+                        <img src="./assets/balls.svg" alt="Balls" />
+                    </figure>
+                    <figure class="figure-bullets hidden">
+                        <img src="./assets/bullets.svg" alt="Carrossel" />
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/balls.svg" alt="Balls" />
-                </figure>
             </section>
             <section class="shortcuts">
                 <ul class="container">
@@ -133,7 +163,7 @@
                 </ul>
             </section>
             <section class="cards">
-                <ul>
+                <ul class="container">
                     <li class="card">
                         <figure>
                             <img
@@ -168,10 +198,10 @@
                     </li>
                 </ul>
             </section>
-            <figure>
+            <figure class="container">
                 <img src="./assets/balls.svg" alt="Balls" />
             </figure>
-            <section class="results-calender">
+            <section class="results-calender container">
                 <div class="results-center">
                     <h2>Central de Resultados</h2>
                     <div>
@@ -186,7 +216,7 @@
                             <img src="./assets/arrow_next.png" alt="" />
                         </button>
                     </div>
-                    <ul class="list-results container">
+                    <ul class="list-results">
                         <li class="result">
                             <figure>
                                 <img
@@ -238,22 +268,24 @@
                 </div>
                 <div class="calender-events">
                     <h2>Calendário de Eventos</h2>
-                    <ul class="list-events container">
+                    <ul class="list-events">
                         <li class="event">
-                            <div class="event-date">
-                                <span class="month">ABR</span>
-                                <span class="day">23 </span>
-                            </div>
                             <div>
-                                <p class="event-message">
-                                    Amet minim mollit non deserunt ullamco est
-                                    sit aliqua dolor do amet sint
-                                </p>
-                                <p class="event-hour">
-                                    00:00 - 23:59 (Horário de Brasília)
-                                </p>
+                                <div class="event-date">
+                                    <span class="month">ABR</span>
+                                    <span class="day">23 </span>
+                                </div>
+                                <div>
+                                    <p class="event-message">
+                                        Amet minim mollit non deserunt ullamco
+                                        est sit aliqua dolor do amet sint
+                                    </p>
+                                    <p class="event-hour">
+                                        00:00 - 23:59 (Horário de Brasília)
+                                    </p>
+                                </div>
                             </div>
-                            <div>
+                            <div class="div-contacts">
                                 <figure>
                                     <img
                                         src="./assets/contacts/gmail.svg"
@@ -269,20 +301,22 @@
                             </div>
                         </li>
                         <li class="event">
-                            <div class="event-date">
-                                <span class="month">ABR</span>
-                                <span class="day">23 </span>
-                            </div>
                             <div>
-                                <p class="event-message">
-                                    Amet minim mollit non deserunt ullamco est
-                                    sit aliqua dolor do amet sint
-                                </p>
-                                <p class="event-hour">
-                                    00:00 - 23:59 (Horário de Brasília)
-                                </p>
+                                <div class="event-date">
+                                    <span class="month">ABR</span>
+                                    <span class="day">23 </span>
+                                </div>
+                                <div>
+                                    <p class="event-message">
+                                        Amet minim mollit non deserunt ullamco
+                                        est sit aliqua dolor do amet sint
+                                    </p>
+                                    <p class="event-hour">
+                                        00:00 - 23:59 (Horário de Brasília)
+                                    </p>
+                                </div>
                             </div>
-                            <div>
+                            <div class="div-contacts">
                                 <figure>
                                     <img
                                         src="./assets/contacts/gmail.svg"
@@ -298,20 +332,22 @@
                             </div>
                         </li>
                         <li class="event">
-                            <div class="event-date">
-                                <span class="month">ABR</span>
-                                <span class="day">23 </span>
-                            </div>
                             <div>
-                                <p class="event-message">
-                                    Amet minim mollit non deserunt ullamco est
-                                    sit aliqua dolor do amet sint
-                                </p>
-                                <p class="event-hour">
-                                    00:00 - 23:59 (Horário de Brasília)
-                                </p>
+                                <div class="event-date">
+                                    <span class="month">ABR</span>
+                                    <span class="day">23 </span>
+                                </div>
+                                <div>
+                                    <p class="event-message">
+                                        Amet minim mollit non deserunt ullamco
+                                        est sit aliqua dolor do amet sint
+                                    </p>
+                                    <p class="event-hour">
+                                        00:00 - 23:59 (Horário de Brasília)
+                                    </p>
+                                </div>
                             </div>
-                            <div>
+                            <div class="div-contacts">
                                 <figure>
                                     <img
                                         src="./assets/contacts/gmail.svg"
