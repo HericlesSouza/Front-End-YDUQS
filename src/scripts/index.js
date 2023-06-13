@@ -15,5 +15,6 @@ closeMenu.addEventListener("click", () => {
     setTimeout(() => {
         navDesktop.removeAttribute("id", "hidden");
         navMobile.setAttribute("id", "hidden");
-    }, 900);
+        navMobile.classList.remove("animate-out");
+    }, 800);
 });
