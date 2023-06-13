@@ -12,7 +12,7 @@
     </head>
     <body>
         <header>
-            <nav class="container hidden">
+            <nav class="nav-desktop container">
                 <figure class="figure-logo">
                     <img
                         src="./assets/header/logo_YDUQS.svg"
@@ -63,24 +63,125 @@
                             alt="Pesquisar"
                         />
                     </figure>
-                    <figure class="figure-burger hidden">
+                    <figure class="figure-burger">
+                        <img src="./assets/header/menu_burger.svg" alt="Menu" />
+                    </figure>
+                    <figure class="figure-burger-desktop hidden">
                         <img src="./assets/header/menu_burger.svg" alt="Menu" />
                     </figure>
                 </div>
             </nav>
-            <nav class="nav-mobile container">
-                <figure class="figure-logo">
-                    <img
-                        src="./assets/header/logo_YDUQS.svg"
-                        alt="Logo YDUQS"
-                    />
-                </figure>
-                <figure class="figure-close-burger hidden">
-                    <img
-                        src="./assets/header/close_menu_burger.svg"
-                        alt="Close Menu"
-                    />
-                </figure>
+            <nav class="nav-mobile" id="hidden">
+                <div class="container">
+                    <div class="div-figure-menu">
+                        <figure class="figure-logo">
+                            <img
+                                src="./assets/header/logo_YDUQS.svg"
+                                alt="Logo YDUQS"
+                            />
+                        </figure>
+                        <figure class="figure-close-burger">
+                            <img
+                                src="./assets/header/close_menu_burger.svg"
+                                alt="Close Menu"
+                            />
+                        </figure>
+                    </div>
+                    <div class="statistics-menu">
+                        <div>
+                            <p>YDUQ3: <span>R$ 35,13</span></p>
+                            <p>YDUQY: <span>R$ 35,13</span></p>
+                        </div>
+                        <figure>
+                            <img
+                                src="./assets/header/grafic.svg"
+                                alt="Grafico"
+                            />
+                        </figure>
+                    </div>
+                    <div class="languages">
+                        <p>English</p>
+                        <figure>
+                            <img
+                                src="./assets/header/en-flag.svg"
+                                alt="Bandeira EUA"
+                            />
+                        </figure>
+                    </div>
+                    <div class="input-search">
+                        <img
+                            src="./assets/header/search_icon.svg"
+                            alt="Pesquisar"
+                        />
+                        <input type="text" placeholder="Pesquisar" />
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <div>
+                                <h3>A YDUQS</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    class="arrow-open-menu"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                            <ul>
+                                <p>Quem Somos</p>
+                                <p>Nossa História</p>
+                                <p>Unidades de Negócio</p>
+                                <p>Transformação Digital</p>
+                                <p>Estrutura Societária</p>
+                                <p>Nossa Liderança</p>
+                                <p>Notícias</p>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <div>
+                                <h3>ESG</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div>
+                                <h3>Governança Corporativa</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div>
+                                <h3>Central de Resultados</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div>
+                                <h3>Informações ao Investidor</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div>
+                                <h3>Contato</h3>
+                                <img
+                                    src="./assets/header/arrow_menu_burger.svg"
+                                    alt="Arrow menu burger"
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -419,5 +520,6 @@
             </div>
         </footer>
         <script src="./scripts/slides.js"></script>
+        <script src="./scripts/index.js"></script>
     </body>
 </html>

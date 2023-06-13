@@ -1,7 +1,3 @@
-
-
-
-//Código do Carrossel
 const cardList = document.querySelector('.card-list');
 const dotsContainer = document.querySelector('.dots');
 const arrows = document.querySelectorAll('.arrow');

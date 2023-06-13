@@ -133,6 +133,7 @@ table {
 header {
   background-color: #12284c;
   padding: 24px 0;
+  position: relative;
 }
 header nav:nth-child(1) {
   display: flex;
@@ -209,6 +210,11 @@ header nav:nth-child(1) div:nth-child(4) .figure-burger > img {
   height: 100%;
 }
 @media (min-width: 992px) {
+  header nav:nth-child(1) div:nth-child(4) .figure-burger {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
   header nav:nth-child(1) div:nth-child(4) .figure-flag {
     display: block;
     height: 25px;
@@ -218,11 +224,167 @@ header nav:nth-child(1) div:nth-child(4) .figure-burger > img {
     display: block;
     cursor: pointer;
   }
+  header nav:nth-child(1) div:nth-child(4) .figure-burger-desktop {
+    display: block;
+  }
+}
+header #hidden {
+  display: none;
+  transform: translateY(-100%);
 }
 header .nav-mobile {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background-color: #12284c;
+  transition: transform 0.3s ease-in-out;
+}
+header .nav-mobile > div {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+header .nav-mobile > div .div-figure-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ffffff;
+}
+header .nav-mobile > div .div-figure-menu .figure-logo {
+  width: 132px;
+  height: 37px;
+}
+header .nav-mobile > div .div-figure-menu .figure-logo > img {
+  width: 100%;
+  height: 100%;
+}
+header .nav-mobile > div .div-figure-menu .figure-close-burger {
+  width: 25px;
+  height: 25px;
+}
+header .nav-mobile > div .div-figure-menu .figure-close-burger > img {
+  width: 100%;
+  height: 100%;
+}
+header .nav-mobile > div .statistics-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+header .nav-mobile > div .statistics-menu div {
+  display: flex;
+  gap: 16px;
+}
+header .nav-mobile > div .statistics-menu div p,
+header .nav-mobile > div .statistics-menu div span {
+  color: #ffffff;
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+  user-select: none;
+}
+header .nav-mobile > div .statistics-menu div p span,
+header .nav-mobile > div .statistics-menu div span span {
+  color: #009abf;
+}
+@media (max-width: 374px) {
+  header .nav-mobile > div .statistics-menu div p,
+  header .nav-mobile > div .statistics-menu div span {
+    font-family: Brandon Grotesque Bold;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 160%;
+  }
+}
+header .nav-mobile > div .languages {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+header .nav-mobile > div .languages p {
+  color: #ffffff;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+header .nav-mobile > div .languages figure {
+  width: 27px;
+  height: 27px;
+}
+header .nav-mobile > div .languages figure > img {
+  width: 100%;
+  height: 100%;
+}
+header .nav-mobile > div .input-search {
+  margin-top: 20px;
+  width: calc(100% - 20px);
+  height: 42px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+header .nav-mobile > div .input-search input,
+header .nav-mobile > div .input-search input::placeholder {
+  width: 100%;
+  margin-left: 15px;
+  border: none;
+  color: #e6e6e6;
+  background: transparent;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
+}
+header .nav-mobile > div > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 32px;
+  gap: 15px;
+}
+header .nav-mobile > div > ul .menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header .nav-mobile > div > ul .menu-item > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .nav-mobile > div > ul .menu-item > div h3 {
+  color: #00adbb;
+  font-family: Brandon Grotesque Bold;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 132%;
+}
+header .nav-mobile > div > ul .menu-item > div .arrow-open-menu {
+  transform: rotate(180deg);
+}
+header .nav-mobile > div > ul .menu-item > ul {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px 0;
+}
+header .nav-mobile > div > ul .menu-item > ul p {
+  color: #ffffff;
+  font-family: Brandon Grotesque Regular;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 160%;
 }
 
 main section:nth-child(1) {
